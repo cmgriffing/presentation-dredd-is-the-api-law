@@ -15,16 +15,19 @@ const logger = winston.createLogger({
   ]
 });
 
-// The ID found in the params section of the apib file
-const widgetId = '42';
 const stash = {};
 
-hooks.after('/widgets > POST', function(transaction) {
+// After creating a widget, add the id from the response to the stash for future use
+hooks.after('/api/widgets > POST', function(transaction) {
   const body = JSON.parse(transaction.real.body);
   stash.widgetId = body._id;
 });
 
-hooks.before('/widgets/{widgetId} > GET', function(transaction) {
+// The ID found in the params section of the apib file
+const widgetId = '42';
+
+// Use the widgetId from before and parse out the one hardcoded in the docs.
+hooks.before('/api/widgets/{widgetId} > GET', function(transaction) {
   transaction.fullPath = transaction.fullPath.replace(widgetId, stash.widgetId);
   transaction.request.uri = transaction.fullPath;
 });
