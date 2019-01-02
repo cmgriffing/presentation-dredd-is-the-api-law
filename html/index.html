@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>010-intro</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="dredd-is-the-api-law" class="slide level1">
+<h1>Dredd is the API Law</h1>
+</section>
+<section class="slide level1">
+
+<section id="section" class="level2">
+<h2></h2>
+<h1>
+Basics
+</h1>
+</section>
+<section id="what-is-dredd" class="level2">
+<h2>What is Dredd?</h2>
+<p>Automated API Documentation Testing</p>
+</section>
+<section id="multi-format-support" class="level2">
+<h2>Multi-format Support</h2>
+<ul>
+<li>API Blueprint</li>
+<li>OpenAPI 2 (formerly Swagger)</li>
+</ul>
+</section>
+<section id="hooks" class="level2">
+<h2>Hooks</h2>
+<p>Run various functions before or after some or all requests.</p>
+<ul>
+<li>Token handling</li>
+<li>Newly created IDs and other State</li>
+</ul>
+</section>
+<section id="hooks-events-part-1" class="level2">
+<h2>Hooks (Events Part 1)</h2>
+<ul>
+<li><code>beforeAll</code> called at the beginning of the whole test run</li>
+<li><code>beforeEach</code> called before each HTTP transaction</li>
+<li><code>before</code> called before some specific HTTP transaction</li>
+<li><code>beforeEachValidation</code> called before each HTTP transaction is validated</li>
+<li><code>beforeValidation</code> called before some specific HTTP transaction is validated</li>
+</ul>
+</section>
+<section id="hooks-events-part-2" class="level2">
+<h2>Hooks (Events Part 2)</h2>
+<ul>
+<li><code>after</code> called after some specific HTTP transaction regardless of its result</li>
+<li><code>afterEach</code> called after each HTTP transaction</li>
+<li><code>afterAll</code> called after the whole test run</li>
+</ul>
+</section>
+<section id="hooks-languages" class="level2">
+<h2>Hooks (Languages)</h2>
+<ul>
+<li>Go</li>
+<li>Node.js (JavaScript)</li>
+<li>Perl</li>
+<li>PHP</li>
+<li>Python</li>
+<li>Ruby</li>
+<li>Rust</li>
+<li>Didn’t find your favorite language? Add a new one!</li>
+</ul>
+</section>
+</section>
+<section class="slide level1">
+
+<section id="section-1" class="level2">
+<h2></h2>
+<h1>
+Why?
+</h1>
+<aside class="notes">
+<p>Ask who has forgotten to update documentation after making a change to the API?</p>
+<ul>
+<li>Renamed model</li>
+<li>changed scope</li>
+<li>added param</li>
+</ul>
+</aside>
+</section>
+</section>
+<section class="slide level1">
+
+<section id="section-2" class="level2">
+<h2></h2>
+<h1>
+Usage
+</h1>
+</section>
+<section id="section-3" class="level2">
+<h2></h2>
+<h1>
+Basics
+</h1>
+</section>
+</section>
+<section class="slide level1">
+
+<section id="citations" class="level2">
+<h2>Citations</h2>
+<style>
+
+  code, pre {
+    background: white;
+  }
+
+  .reveal pre {
+    border: 4px solid black;
+    box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.4), 0 0 1.5rem 0 rgba(0, 0, 0, 0.2), inset 0 0 1rem 0 rgba(255, 255, 255, 0.4), inset 0 0 2.5rem 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .reveal section img {
+    max-height: 30vh;
+    background: #FFF;
+    box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.4), 0 0 1.5rem 0 rgba(0, 0, 0, 0.2), inset 0 0 1rem 0 rgba(255, 255, 255, 0.4), inset 0 0 2.5rem 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .col-2 {
+    width: 50%;
+    float: left;
+  }
+
+</style>
+</section>
+</section>
+<section id="dredd-is-the-api-law-1" class="slide level1">
+<h1>Dredd is the API Law</h1>
+</section>
+<section class="slide level1">
+
+<section id="section-4" class="level2">
+<h2></h2>
+<h1>
+Basics
+</h1>
+</section>
+<section id="what-is-dredd-1" class="level2">
+<h2>What is Dredd?</h2>
+<p>Automated API Documentation Testing</p>
+</section>
+<section id="multi-format-support-1" class="level2">
+<h2>Multi-format Support</h2>
+<ul>
+<li>API Blueprint</li>
+<li>OpenAPI 2 (formerly Swagger)</li>
+</ul>
+</section>
+<section id="hooks-1" class="level2">
+<h2>Hooks</h2>
+<p>Run various functions before or after some or all requests.</p>
+<ul>
+<li>Token handling</li>
+<li>Newly created IDs and other State</li>
+</ul>
+</section>
+<section id="hooks-events-part-1-1" class="level2">
+<h2>Hooks (Events Part 1)</h2>
+<ul>
+<li><code>beforeAll</code> called at the beginning of the whole test run</li>
+<li><code>beforeEach</code> called before each HTTP transaction</li>
+<li><code>before</code> called before some specific HTTP transaction</li>
+<li><code>beforeEachValidation</code> called before each HTTP transaction is validated</li>
+<li><code>beforeValidation</code> called before some specific HTTP transaction is validated</li>
+</ul>
+</section>
+<section id="hooks-events-part-2-1" class="level2">
+<h2>Hooks (Events Part 2)</h2>
+<ul>
+<li><code>after</code> called after some specific HTTP transaction regardless of its result</li>
+<li><code>afterEach</code> called after each HTTP transaction</li>
+<li><code>afterAll</code> called after the whole test run</li>
+</ul>
+</section>
+<section id="hooks-languages-1" class="level2">
+<h2>Hooks (Languages)</h2>
+<ul>
+<li>Go</li>
+<li>Node.js (JavaScript)</li>
+<li>Perl</li>
+<li>PHP</li>
+<li>Python</li>
+<li>Ruby</li>
+<li>Rust</li>
+<li>Didn’t find your favorite language? Add a new one!</li>
+</ul>
+</section>
+</section>
+<section class="slide level1">
+
+<section id="section-5" class="level2">
+<h2></h2>
+<h1>
+Why?
+</h1>
+<aside class="notes">
+<p>Ask who has forgotten to update documentation after making a change to the API?</p>
+<ul>
+<li>Renamed model</li>
+<li>changed scope</li>
+<li>added param</li>
+</ul>
+</aside>
+</section>
+</section>
+<section class="slide level1">
+
+<section id="section-6" class="level2">
+<h2></h2>
+<h1>
+Usage
+</h1>
+</section>
+<section id="section-7" class="level2">
+<h2></h2>
+<h1>
+Basics
+</h1>
+</section>
+</section>
+<section class="slide level1">
+
+<section id="citations-1" class="level2">
+<h2>Citations</h2>
+<style>
+
+  code, pre {
+    background: white;
+  }
+
+  .reveal pre {
+    border: 4px solid black;
+    box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.4), 0 0 1.5rem 0 rgba(0, 0, 0, 0.2), inset 0 0 1rem 0 rgba(255, 255, 255, 0.4), inset 0 0 2.5rem 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .reveal section img {
+    max-height: 30vh;
+    background: #FFF;
+    box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.4), 0 0 1.5rem 0 rgba(0, 0, 0, 0.2), inset 0 0 1rem 0 rgba(255, 255, 255, 0.4), inset 0 0 2.5rem 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .col-2 {
+    width: 50%;
+    float: left;
+  }
+
+</style>
+</section>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

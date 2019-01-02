@@ -1,0 +1,31 @@
+{
+  "name": "dredd-presentation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "slides:assets": "mkdir -p html/assets && cp -a slides/assets/. html/assets/",
+    "slides:build": "npm run slides:assets && pandoc --section-divs -s -t revealjs slides/*.md -o html/index.html --verbose --slide-level=1 --from markdown-yaml_metadata_block --variable theme='beige'",
+    "slides:watch": "nodemon --exec \"npm run slides:build\" slides/*.md",
+    "slides:deploy": "npm run slides:assets && git subtree push --prefix html origin gh-pages",
+    "server": "node src/index.js",
+    "dredd": "dredd",
+    "priv:dredd": "wait-on http://localhost:4242/ dredd",
+    "test:dredd": "npm-run-all -p -r dredd server"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "dredd": "^5.4.1",
+    "nodemon": "*",
+    "npm-run-all": "^4.1.5",
+    "wait-on": "^3.2.0",
+    "winston": "^3.1.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "nedb": "^1.8.0",
+    "nedb-promise": "^2.0.1"
+  }
+}

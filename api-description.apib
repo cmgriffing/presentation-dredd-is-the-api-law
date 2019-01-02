@@ -1,0 +1,24 @@
+FORMAT: 1A
+
+# GET /
++ Response 200 (application/json; charset=utf-8)
+
+        {"message": "Hello"}
+
+# POST /api/widgets
++ Request (application/json)
+
+        {"name": "my widget", "size": "large", "weight": "heavy"}
+
++ Response 200 (application/json; charset=utf-8)
+
+        {"_id": "casd978fasdg98ads7gasdf7g", "name": "my widget", "size": "large", "weight": "heavy"}
+
+
+# GET /api/widgets/{widgetId}
++ Parameters
+    + widgetId: 42 (string, required)
+
++ Response 200 (application/json; charset=utf-8)
+
+        {"_id": "casd978fasdg98ads7gasdf7g", "name": "my widget", "size": "large", "weight": "heavy"}
