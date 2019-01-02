@@ -14,6 +14,71 @@
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
   <link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
   <!-- Printing and PDF exports -->
   <script>
@@ -119,139 +184,77 @@ Why?
 Usage
 </h1>
 </section>
-<section id="section-3" class="level2">
-<h2></h2>
-<h1>
-Basics
-</h1>
-</section>
-</section>
-<section class="slide level1">
-
-<section id="citations" class="level2">
-<h2>Citations</h2>
-<style>
-
-  code, pre {
-    background: white;
-  }
-
-  .reveal pre {
-    border: 4px solid black;
-    box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.4), 0 0 1.5rem 0 rgba(0, 0, 0, 0.2), inset 0 0 1rem 0 rgba(255, 255, 255, 0.4), inset 0 0 2.5rem 0 rgba(0, 0, 0, 0.2);
-  }
-
-  .reveal section img {
-    max-height: 30vh;
-    background: #FFF;
-    box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.4), 0 0 1.5rem 0 rgba(0, 0, 0, 0.2), inset 0 0 1rem 0 rgba(255, 255, 255, 0.4), inset 0 0 2.5rem 0 rgba(0, 0, 0, 0.2);
-  }
-
-  .col-2 {
-    width: 50%;
-    float: left;
-  }
-
-</style>
-</section>
-</section>
-<section id="dredd-is-the-api-law-1" class="slide level1">
-<h1>Dredd is the API Law</h1>
-</section>
-<section class="slide level1">
-
-<section id="section-4" class="level2">
-<h2></h2>
-<h1>
-Basics
-</h1>
-</section>
-<section id="what-is-dredd-1" class="level2">
-<h2>What is Dredd?</h2>
-<p>Automated API Documentation Testing</p>
-</section>
-<section id="multi-format-support-1" class="level2">
-<h2>Multi-format Support</h2>
-<ul>
-<li>API Blueprint</li>
-<li>OpenAPI 2 (formerly Swagger)</li>
-</ul>
-</section>
-<section id="hooks-1" class="level2">
-<h2>Hooks</h2>
-<p>Run various functions before or after some or all requests.</p>
-<ul>
-<li>Token handling</li>
-<li>Newly created IDs and other State</li>
-</ul>
-</section>
-<section id="hooks-events-part-1-1" class="level2">
-<h2>Hooks (Events Part 1)</h2>
-<ul>
-<li><code>beforeAll</code> called at the beginning of the whole test run</li>
-<li><code>beforeEach</code> called before each HTTP transaction</li>
-<li><code>before</code> called before some specific HTTP transaction</li>
-<li><code>beforeEachValidation</code> called before each HTTP transaction is validated</li>
-<li><code>beforeValidation</code> called before some specific HTTP transaction is validated</li>
-</ul>
-</section>
-<section id="hooks-events-part-2-1" class="level2">
-<h2>Hooks (Events Part 2)</h2>
-<ul>
-<li><code>after</code> called after some specific HTTP transaction regardless of its result</li>
-<li><code>afterEach</code> called after each HTTP transaction</li>
-<li><code>afterAll</code> called after the whole test run</li>
-</ul>
-</section>
-<section id="hooks-languages-1" class="level2">
-<h2>Hooks (Languages)</h2>
-<ul>
-<li>Go</li>
-<li>Node.js (JavaScript)</li>
-<li>Perl</li>
-<li>PHP</li>
-<li>Python</li>
-<li>Ruby</li>
-<li>Rust</li>
-<li>Didn’t find your favorite language? Add a new one!</li>
-</ul>
-</section>
-</section>
-<section class="slide level1">
-
-<section id="section-5" class="level2">
-<h2></h2>
-<h1>
-Why?
-</h1>
+<section id="a-basic-get" class="level2">
+<h2>A Basic GET</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode ruby"><code class="sourceCode ruby"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="dt">FORMAT</span>: 1A</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co"># GET /</span></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">+ <span class="dt">Response</span> <span class="dv">200</span> (application/json; charset=utf<span class="dv">-8</span>)</a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb1-6" data-line-number="6">        {<span class="st">&quot;message&quot;</span>: <span class="st">&quot;Hello&quot;</span>}</a></code></pre></div>
 <aside class="notes">
-<p>Ask who has forgotten to update documentation after making a change to the API?</p>
-<ul>
-<li>Renamed model</li>
-<li>changed scope</li>
-<li>added param</li>
-</ul>
+<p>Dredd will check: Status Code, Content-Type, and provided headers (none used here)</p>
+<p>The message key gets checked, but the value does not.</p>
+</aside>
+</section>
+<section id="a-basic-post" class="level2">
+<h2>A Basic POST</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode ruby"><code class="sourceCode ruby"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># POST /api/widgets</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">+ <span class="dt">Request</span> (application/json)</a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4">        {<span class="st">&quot;name&quot;</span>: <span class="st">&quot;my widget&quot;</span>, <span class="st">&quot;size&quot;</span>: <span class="st">&quot;large&quot;</span>, <span class="st">&quot;weight&quot;</span>: <span class="st">&quot;heavy&quot;</span>}</a>
+<a class="sourceLine" id="cb2-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6">+ <span class="dt">Response</span> <span class="dv">200</span> (application/json; charset=utf<span class="dv">-8</span>)</a>
+<a class="sourceLine" id="cb2-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8">        {<span class="st">&quot;_id&quot;</span>: <span class="st">&quot;casd978fasdg98ads7gasdf7g&quot;</span>, <span class="st">&quot;name&quot;</span>: <span class="st">&quot;my widget&quot;</span>, <span class="st">&quot;size&quot;</span>: <span class="st">&quot;large&quot;</span>, <span class="st">&quot;weight&quot;</span>: <span class="st">&quot;heavy&quot;</span>}</a></code></pre></div>
+<aside class="notes">
+<p>The exact request object is sent as the body.</p>
+</aside>
+</section>
+<section id="dynamic-data" class="level2">
+<h2>Dynamic Data</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode ruby"><code class="sourceCode ruby"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="co"># GET /api/widgets/{widgetId}</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">+ <span class="dt">Parameters</span></a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">    + <span class="st">widgetId: </span><span class="dv">42</span> (string, required)</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5">+ <span class="dt">Response</span> <span class="dv">200</span> (application/json; charset=utf<span class="dv">-8</span>)</a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb3-7" data-line-number="7">        {<span class="st">&quot;_id&quot;</span>: <span class="st">&quot;casd978fasdg98ads7gasdf7g&quot;</span>, <span class="st">&quot;name&quot;</span>: <span class="st">&quot;my widget&quot;</span>, <span class="st">&quot;size&quot;</span>: <span class="st">&quot;large&quot;</span>, <span class="st">&quot;weight&quot;</span>: <span class="st">&quot;heavy&quot;</span>}</a></code></pre></div>
+<aside class="notes">
+<p>Take note of widgetId in url and params.</p>
+</aside>
+</section>
+<section id="using-hooks-handling-responses" class="level2">
+<h2>Using Hooks (handling responses)</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">const</span> stash <span class="op">=</span> <span class="op">{};</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co">// After creating a widget, add the id from the response to the stash for future use</span></a>
+<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="va">hooks</span>.<span class="at">after</span>(<span class="st">&#39;/widgets &gt; POST&#39;</span><span class="op">,</span> <span class="kw">function</span>(transaction) <span class="op">{</span></a>
+<a class="sourceLine" id="cb4-5" data-line-number="5">  <span class="kw">const</span> body <span class="op">=</span> <span class="va">JSON</span>.<span class="at">parse</span>(<span class="va">transaction</span>.<span class="va">real</span>.<span class="at">body</span>)<span class="op">;</span></a>
+<a class="sourceLine" id="cb4-6" data-line-number="6">  <span class="va">stash</span>.<span class="at">widgetId</span> <span class="op">=</span> <span class="va">body</span>.<span class="at">_id</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb4-7" data-line-number="7"><span class="op">}</span>)<span class="op">;</span></a></code></pre></div>
+<aside class="notes">
+<p>We “stash” the widgetId on a higher scoped object</p>
+</aside>
+</section>
+<section id="using-hooks-modifying-requests" class="level2">
+<h2>Using Hooks (modifying requests)</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode javascript"><code class="sourceCode javascript"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="co">// The ID found in the params section of the apib file</span></a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="kw">const</span> widgetId <span class="op">=</span> <span class="st">&#39;42&#39;</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="co">// Use the widgetId from before and parse out the one hardcoded in the docs.</span></a>
+<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="va">hooks</span>.<span class="at">before</span>(<span class="st">&#39;/widgets/{widgetId} &gt; GET&#39;</span><span class="op">,</span> <span class="kw">function</span>(transaction) <span class="op">{</span></a>
+<a class="sourceLine" id="cb5-6" data-line-number="6">  <span class="va">transaction</span>.<span class="at">fullPath</span> <span class="op">=</span> <span class="va">transaction</span>.<span class="va">fullPath</span>.<span class="at">replace</span>(widgetId<span class="op">,</span> <span class="va">stash</span>.<span class="at">widgetId</span>)<span class="op">;</span></a>
+<a class="sourceLine" id="cb5-7" data-line-number="7">  <span class="va">transaction</span>.<span class="va">request</span>.<span class="at">uri</span> <span class="op">=</span> <span class="va">transaction</span>.<span class="at">fullPath</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="op">}</span>)<span class="op">;</span></a></code></pre></div>
+<aside class="notes">
+<p>We just modfy the transaction instead of returning it. (I would prefer return)</p>
 </aside>
 </section>
 </section>
 <section class="slide level1">
 
-<section id="section-6" class="level2">
-<h2></h2>
-<h1>
-Usage
-</h1>
-</section>
-<section id="section-7" class="level2">
-<h2></h2>
-<h1>
-Basics
-</h1>
-</section>
-</section>
-<section class="slide level1">
-
-<section id="citations-1" class="level2">
+<section id="citations" class="level2">
 <h2>Citations</h2>
 <style>
 
