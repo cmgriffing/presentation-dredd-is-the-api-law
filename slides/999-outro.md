@@ -28,7 +28,7 @@
   }
 
   .small-link-wrapper a {
-    font-size: 26px;
+    font-size: 22px;
   }
 
 </style>
