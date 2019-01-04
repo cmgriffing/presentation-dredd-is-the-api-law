@@ -6,10 +6,14 @@
 
 Automated API Documentation Testing
 
+##
+
+![](./assets/dredd-pointing-gun.jpeg)
+
 ## Multi-format Support
 
-- API Blueprint
-- OpenAPI 2 (formerly Swagger)
+- API Blueprint [https://apiblueprint.org/](https://apiblueprint.org/)
+- OpenAPI 2 [https://swagger.io/](https://swagger.io/)
 
 ## Hooks
 

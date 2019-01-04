@@ -1,4 +1,9 @@
-## Citations
+## Relevant Links
+
+- [https://dredd.org/en/latest/index.html](https://dredd.org/en/latest/index.html)
+- [https://apiblueprint.org/documentation/tutorial.html](https://apiblueprint.org/documentation/tutorial.html)
+- [https://swagger.io/docs/specification/about/](https://swagger.io/docs/specification/about/)
+
 
 <style>
 
@@ -20,6 +25,10 @@
   .col-2 {
     width: 50%;
     float: left;
+  }
+
+  .small-link-wrapper a {
+    font-size: 26px;
   }
 
 </style>
