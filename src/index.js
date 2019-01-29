@@ -21,7 +21,7 @@ app.post('/api/widgets', async (req, res) => {
     const  result = await Widgets.insert(sanitized);
     res.json(result);
   } else {
-    res.json(400, { error: 'Malformed Request Body' });
+    res.json(400, { error: 'Malformed Request Body', payload: req.body });
   }
 });
 
@@ -46,7 +46,7 @@ function sanitizeWidget(payload) {
     'weight',
   ];
 
-  const valid = true
+  let valid = true;
   const sanitized = {};
 
   keys.forEach(key => {
@@ -54,15 +54,11 @@ function sanitizeWidget(payload) {
       valid = false;
     }
     sanitized[key] = payload[key];
-
-    if(valid) {
-      return sanitized;
-    } else {
-      return false;
-    }
   });
 
-  return {
-
+  if(valid === true) {
+    return sanitized;
+  } else {
+    return false;
   }
 }
