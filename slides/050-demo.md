@@ -5,7 +5,7 @@
 <div class="notes">
 Show:
 
-- adding a version namespace
+- adding a version namespace - index.js first
 
   - then failure
 
