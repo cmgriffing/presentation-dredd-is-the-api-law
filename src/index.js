@@ -14,7 +14,7 @@ app.get('/', (req, res) => res.json({
   message: 'Hello'
 }));
 
-app.post('/api/v1/widgets', async (req, res) => {
+app.post('/api/widgets', async (req, res) => {
 
   const sanitized = sanitizeWidget(req.body);
   if(sanitized) {
@@ -25,7 +25,7 @@ app.post('/api/v1/widgets', async (req, res) => {
   }
 });
 
-app.get('/api/v1/widgets/:widgetId', async (req, res) => {
+app.get('/api/widgets/:widgetId', async (req, res) => {
   const widget = await Widgets.findOne({ _id: req.params.widgetId });
 
   if(widget) {
@@ -43,8 +43,7 @@ function sanitizeWidget(payload) {
   const keys = [
     'name',
     'size',
-    'weight',
-    'serial'
+    'weight'
   ];
 
   let valid = true;

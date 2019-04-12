@@ -51,6 +51,8 @@
 </div>
 
 ```ruby
+# PUT /image-upload
+
 + Request (image/png)
 
 + Response 200 (application/json; charset=utf-8)

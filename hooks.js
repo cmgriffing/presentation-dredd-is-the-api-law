@@ -18,7 +18,7 @@ const logger = winston.createLogger({
 const stash = {};
 
 // After creating a widget, add the id from the response to the stash for future use
-hooks.after('/api/v1/widgets > POST', function(transaction) {
+hooks.after('/api/widgets > POST', function(transaction) {
   const body = JSON.parse(transaction.real.body);
   stash.widgetId = body._id;
 });
@@ -27,7 +27,7 @@ hooks.after('/api/v1/widgets > POST', function(transaction) {
 const widgetId = '42';
 
 // Use the widgetId from before and parse out the one hardcoded in the docs.
-hooks.before('/api/v1/widgets/{widgetId} > GET', function(transaction) {
+hooks.before('/api/widgets/{widgetId} > GET', function(transaction) {
   transaction.fullPath = transaction.fullPath.replace(widgetId, stash.widgetId);
   transaction.request.uri = transaction.fullPath;
 });
